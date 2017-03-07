@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-yundun",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "repository": "git@github.com:czyin/eslint-config-yundun.git",
   "author": "czyin <chengzhi.yin@outlook.com>",
