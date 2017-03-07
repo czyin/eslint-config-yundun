@@ -21,10 +21,9 @@ module.exports = {
 
     'no-new-func': 'error',
 
-    // 'no-param-reassign': ['error', {
-    //   props: true
-    // }],
-    'no-param-reassign': ['off'], // 禁止对函数参数再赋值
+    'no-param-reassign': ['error', {
+      props: true
+    }],
 
     'no-iterator': 'error',
 
@@ -65,7 +64,7 @@ module.exports = {
     /********************************************************************************
      CORE: Node.js and CommonJS
     ********************************************************************************/
-    'global-require': ['warn'], // 强制在模块顶部调用 require()
+    'global-require': ['off'], // 强制在模块顶部调用 require()
 
     /********************************************************************************
      CORE: Stylistic Issues
@@ -260,7 +259,7 @@ module.exports = {
     }],
 
     'arrow-parens': ['error', 'as-needed', {
-      requireForBlockBody: true,
+      // requireForBlockBody: true,
     }],
 
     'no-confusing-arrow': ['error', {
