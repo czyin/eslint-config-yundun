@@ -1,4 +1,24 @@
 module.exports = {
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module'
+  },
+  env: {
+    es6: true,
+    browser: true,
+    node: true
+  },
+  plugins: [
+    'eslint-plugin-html',
+    'eslint-plugin-import',
+    'eslint-import-resolver-webpack'
+  ],
+  settings: {
+    "html/html-extensions": [".html", ".vue"]
+  },
+  global: {
+    //
+  }
   rules: {
 
     /********************************************************************************
@@ -21,9 +41,11 @@ module.exports = {
 
     'no-new-func': 'error',
 
-    'no-param-reassign': ['error', {
-      props: true
-    }],
+    // 'no-param-reassign': ['error', {
+    //   props: true
+    // }],
+
+    'no-param-reassign': ['off'],
 
     'no-iterator': 'error',
 
@@ -216,9 +238,11 @@ module.exports = {
       capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
     }],
 
-    'no-underscore-dangle': ['error', {
-      allowAfterThis: false
-    }],
+    // 'no-underscore-dangle': ['error', {
+    //   allowAfterThis: false
+    // }],
+
+    'no-underscore-dangle': ['off'],
 
     /********************************************************************************
      CORE: ECMAScript 6
@@ -278,6 +302,10 @@ module.exports = {
     }],
 
     /********************************************************************************
+     PLUGIN: eslint-plugin-html
+    ********************************************************************************/
+
+    /********************************************************************************
      PLUGIN: eslint-plugin-import
     ********************************************************************************/
     'import/no-mutable-exports': 'error',
@@ -287,7 +315,8 @@ module.exports = {
     // 'import/first': ['error', 'absolute-first'],
     'import/first': ['off'],
 
-    'import/no-webpack-loader-syntax': 'error',
+    // 'import/no-webpack-loader-syntax': 'error',
+    'import/no-webpack-loader-syntax': 'off',
 
     'import/no-dynamic-require': ['off'],
 
