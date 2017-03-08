@@ -10,8 +10,7 @@ module.exports = {
   },
   plugins: [
     'eslint-plugin-html',
-    'eslint-plugin-import',
-    'eslint-import-resolver-webpack'
+    'eslint-plugin-import'
   ],
   settings: {
     "html/html-extensions": [".html", ".vue"]
